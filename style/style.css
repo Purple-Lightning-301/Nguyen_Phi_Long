@@ -1,5 +1,14 @@
+.container-fluid {
+  background-color: black !important;
+}
 .nav-link {
     color: white !important;
+    margin-left: 50px !important;
+    margin-right: 50px !important;
+    font-weight: bold !important;
+}
+.nav-link:hover {
+  color:black !important;
 }
 .navbar-brand {
     color: white !important;
@@ -12,27 +21,35 @@
 }
 .col-md-4 {
     color: white !important;
+    text-align: justify !important;
+    padding: 20px !important;
 }
 .vertical-menu {
-    
+    height: 1393.28px;
+    background-color: black;
+    padding-top: 25px;
   }
   
   .vertical-menu a {
-    background-color: #eee;
-    color: black;
+    background-color: black;
+    color: white;
     display: block;
     padding: 12px;
     text-decoration: none;
   }
   
   .vertical-menu a:hover {
-    background-color: #ccc;
+    background-color: gray;
+    color: white;
   }
   
   .vertical-menu a.active {
-    background-color: #4CAF50;
+    background-color: black;
     color: white;
+    font-size: xx-large;
+    border-bottom: solid thin white !important;
   }
+
   h2 {
       color: white !important;
   }
@@ -47,4 +64,32 @@
     margin: auto;
     color: white;
   }
+  #Homepage_Name {
+    font-weight: bold !important;
+    font-size: x-large !important;
+  }
+  #Srch_Btn {
+    color: white !important;
+    background-color: red !important;
+    border-color: white !important;
+  }
+  #Srch_Btn:hover {
+    color: red !important;
+    background-color: white !important;
+    font-weight: bold !important;
+  }
+  .character-img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .col-md-6 {
+    margin: auto !important;
+  }
+  h1 {
+    font-weight: lighter;
+  }
+  #information {
+    font-weight: bold;
+  }
+  
   
