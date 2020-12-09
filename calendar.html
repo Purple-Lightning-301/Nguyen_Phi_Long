@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="/js/moment.js"></script>
+    <title>Booking</title>
+    <style>
+        tr {
+            height: 100px;
+            background-color: white;
+        }
+
+        td {
+            border: 2px ridge;
+            text-align: right;
+            width: 1000px;
+        }
+
+        .calendar-head {
+            height: 10px;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <table class="table">
+            <thead>
+                <tr class="calendar-head">
+                    <td>Mon</td>
+                    <td>Tue</td>
+                    <td>Wed</td>
+                    <td>Thu</td>
+                    <td>Fri</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>30 </td>
+                    <td>1 </td>
+                    <td>2 </td>
+                    <td>3 </td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>7 </td>
+                    <td>8 </td>
+                    <td>9 </td>
+                    <td>10 </td>
+                    <td>11 </td>
+                </tr>
+                <tr>
+                    <td>14 </td>
+                    <td>15 </td>
+                    <td>16 </td>
+                    <td>17 </td>
+                    <td>18 </td>
+                </tr>
+                <tr>
+                    <td>21 </td>
+                    <td>22 </td>
+                    <td>23 </td>
+                    <td>24 </td>
+                    <td>25 </td>
+                </tr>
+                <tr>
+                    <td>28 </td>
+                    <td>29 </td>
+                    <td>30 </td>
+                    <td>31 </td>
+                    <td>1 </td>
+                </tr>
+                <tr>
+                    <td>4 </td>
+                    <td>5 </td>
+                    <td>6 </td>
+                    <td>7 </td>
+                    <td>8 </td>
+                </tr>
+            </tbody>
+        </table>
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Meeting room reservation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row" style="height: 150px;">
+                        <div class="col-md-6">
+                            <h5>Start Date</h5>
+                            <input type="date" id="start-date">
+                        </div>
+                        <div class="col-md-6">
+                            <h5>End Date</h5>
+                            <input type="date" id="end-date">
+                        </div>
+                    </div>
+                    <div class="row">
+                        Note
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" style="margin: auto; border-radius: 15px;"
+                        onclick="format()">Book</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+            
+        </script>
+        <script>
+        function format() {
+            let start_date = document.getElementById("start-date").value;
+            alert("Start Date : " + moment(start_date).format("YYYY MM DD"));
+
+            let end_date = document.getElementById("end-date").value;
+            alert("End Date : " + moment(start_date).add(5, "days").format("YYYY MM DD"));
+
+            let note = document.getElementById("note").value;
+            alert("Note : " + note);
+            } 
+        </script>
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
